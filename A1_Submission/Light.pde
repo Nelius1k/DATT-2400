@@ -26,7 +26,7 @@ void draw() {
   
   for (int j=0; j < 15; j++) {
    
-    pyramid(random(width),random(height),random(100, 500),random(200),random(2));
+    pyramid(random(100, 500),random(200),random(2));
     
   }
   
@@ -42,7 +42,7 @@ void mousePressed() {
   redraw();
 }
 
-void pyramid(float x, float y, float size, float limit, float diff) {
+void pyramid(float size, float limit, float diff) {
 
   float red = random(255);
   float green = random(255);
@@ -63,8 +63,8 @@ void pyramid(float x, float y, float size, float limit, float diff) {
     /*
     Values x and y can be replaced by mouseX and mouseY for better user experience
     */
-    ellipse(x,y,size,size);
-    rect(x,y, size/3, size/3);
+    ellipse(mouseX,mouseY,size,size);
+    rect(mouseX,mouseY, size/3, size/3);
     
     }
     
